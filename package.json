@@ -1,6 +1,7 @@
 {
   "name": "githuber",
   "version": "0.0.0-development",
+  "description": "A simple app to display a github profile.",
   "author": "Matheus Pimenta <matheuspiment@hotmail.com> (https://github.com/matheuspiment)",
   "repository": "https://github.com/matheuspiment/githuber.git",
   "private": true,
