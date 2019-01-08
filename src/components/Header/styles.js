@@ -19,6 +19,10 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.darker,
   },
+
+  icon: {
+    color: colors.darker,
+  },
 });
 
 export default Styles;
