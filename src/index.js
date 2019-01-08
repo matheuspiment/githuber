@@ -2,43 +2,9 @@ import './config/ReactotronConfig';
 import './config/DevToolsConfig';
 
 import React from 'react';
-import {
-  Platform, StyleSheet, Text, View,
-} from 'react-native';
 
-const GRAY = '#F5FCFF';
-const GRAY_STRONG = '#333333';
+import Routes from './routes';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: GRAY,
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: GRAY_STRONG,
-    marginBottom: 5,
-  },
-});
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\nCmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\nShake or press menu button for dev menu',
-});
-
-const App = () => (
-  <View style={styles.container}>
-    <Text style={styles.welcome}>Welcome to React Native!</Text>
-    <Text style={styles.instructions}>To get started, edit App.js</Text>
-    <Text style={styles.instructions}>{instructions}</Text>
-  </View>
-);
+const App = () => <Routes />;
 
 export default App;
