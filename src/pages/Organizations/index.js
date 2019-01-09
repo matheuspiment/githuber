@@ -41,7 +41,7 @@ export default class Organizations extends Component {
     this.setState({ refreshing: true });
 
     const username = await AsyncStorage.getItem('@githuber:username');
-    const { data } = await api.get(`/users/${username}/repos`);
+    const { data } = await api.get(`/users/${username}/orgs`);
 
     this.setState({ data, loading: false, refreshing: false });
   };
