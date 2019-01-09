@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withNavigation } from 'react-navigation';
 
 import {
-  View, Text, TouchableOpacity, StatusBar, AsyncStorage,
+  View, Text, TouchableOpacity, StatusBar, AsyncStorage, Platform,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -23,7 +23,7 @@ class Header extends Component {
 
     return (
       <View style={Styles.container}>
-        <StatusBar barStyle="dark-content" />
+        <StatusBar barStyle={Platform.OS === 'ios' ? 'dark-content' : 'light-content'} />
         <View style={Styles.left} />
         <Text style={Styles.title}>{title}</Text>
         <TouchableOpacity onPress={this.signOut}>
